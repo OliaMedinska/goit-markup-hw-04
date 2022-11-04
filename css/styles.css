@@ -8,6 +8,7 @@
 /* #F5F4FA - колір другорядного фону (сірий темний) */
 /* #ECECEC - колір рамки хедера */
 /* #EEEEEE - колір рамки карток */
+/* rgba(47, 48, 58, 0.4) -color hero-img*/
 :root {
     --title-text-color: #212121 ;
     --primary-text-color: #757575 ;
@@ -19,6 +20,7 @@
     --second-background-color:  #F5F4FA ;
     --header-bording-color: #ECECEC;
     --card-border: #EEEEEE;
+    --hero-img: rgba(47, 48, 58, 0.4);
 }
  .photos{
     display: flex;
@@ -183,6 +185,20 @@ header{
     padding-bottom: 32px;
 }
 
+.nav-img{
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon{
+   fill:var(--primary-text-color) ;
+   margin-right: 10px; 
+}
+
+.contact:hover > .nav-icon{
+    fill:var(--accent-text-color)
+}
+
 /*відступи між .list .contact*/
 .list .item-contact {
     margin-right: 50px;
@@ -288,6 +304,9 @@ li.address-footer{
 /* hero */
 .hero-background {
         background-color: var(--footer-background-color);
+        background-image: url("./background-hero-img.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
 }
 
 .section-hero{
@@ -357,6 +376,29 @@ padding-right: 15px;
 
 /*переваги*/
 /* section title */
+.decoration-icons{
+    display:flex;
+    gap: 30px;
+
+}
+
+.feauter-section-img{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 270px;
+height: 120px;
+background-color: var(--second-background-color);
+border-radius: 4px;
+margin-bottom: 30px;
+
+}
+
+.feauter-section-icon{
+width: 70px;
+height: 70px;
+}
+
 .section-first {
 padding-top: 94px;
 padding-bottom: 94px;
