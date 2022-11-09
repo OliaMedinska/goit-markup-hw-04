@@ -8,7 +8,9 @@
 /* #F5F4FA - колір другорядного фону (сірий темний) */
 /* #ECECEC - колір рамки хедера */
 /* #EEEEEE - колір рамки карток */
+/* #AFB1B8- колір логотипів*/
 /* rgba(47, 48, 58, 0.4) -color hero-img*/
+/*rgba(255, 255, 255, 0.1); -color back for icon footer*/
 :root {
     --title-text-color: #212121 ;
     --primary-text-color: #757575 ;
@@ -17,10 +19,12 @@
     --button-background-color: #F5F5F5 ;
     --footer-background-color: #2F303A;
     --second-text-color-footer: rgba(255, 255, 255, 0.6);
+    --footer-background-icon: rgba(255, 255, 255, 0.1);
     --second-background-color:  #F5F4FA ;
     --header-bording-color: #ECECEC;
     --card-border: #EEEEEE;
     --hero-img: rgba(47, 48, 58, 0.4);
+    --logo-color: #AFB1B8;
 }
  .photos{
     display: flex;
@@ -37,9 +41,9 @@ body {
 
 
 img {
-    justify-content:space-around;
     max-width: 100%;
     height: auto;
+    display: block;
 }
 .list-pictures{
     display: inline-flex;
@@ -173,6 +177,7 @@ header{
     color: var(--primary-text-color);
     text-decoration: none;
 }
+
 .contact:hover, .contact:focus{
     color:var(--accent-text-color);
     font-weight: 500;
@@ -188,14 +193,19 @@ header{
 .nav-img{
     display: flex;
     align-items: center;
+    color: var(--primary-text-color);
+    
+}
+.nav-img :hover, .nav-img :focus{
+    color:var(--accent-text-color);
 }
 
-.nav-icon{
-   fill:var(--primary-text-color) ;
+.nav-img{
+   color: currentColor;
    margin-right: 10px; 
 }
 
-.contact:hover > .nav-icon{
+.contact:hover, .contact:focus > .nav-icon{
     fill:var(--accent-text-color)
 }
 
@@ -209,6 +219,16 @@ header{
 }
 
 /* footer */
+.footer-position{
+display: flex;
+flex-direction: row;
+gap: 70px;
+}
+
+.footer-position-part{
+align-items: center;
+}
+
 footer{
     background-color: var(--footer-background-color);
     display: list-item;
@@ -230,6 +250,7 @@ footer{
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
+    cursor: pointer;
 
 }
 
@@ -298,6 +319,24 @@ li.address-footer{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+}
+
+.footer-text{
+font-style: normal;
+font-weight: 700;
+line-height: 16px;
+
+color: var(--second-text-color);
+}
+.cards-img-icon.img-footer{
+    background-color:var(--footer-background-icon);
+}
+.cards-img-icon.img-footer:hover{
+    background-color: var(--accent-text-color);
+}
+
+.cards-icon.icon-footer{
+fill:var(--second-text-color);
 }
 
 /*main index*/
@@ -517,7 +556,83 @@ div.card-member{
         line-height: 1.18;
         color: var(--primary-text-color);
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
+}
+
+/*ikonki dla kartek*/
+.cards-img{
+ display: flex;
+ gap: 10px;
+}
+
+.cards-img-icon{
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background-color: var(--second-text-color);
+
+}
+
+.cards-img-icon:hover{
+background-color: var(--accent-text-color);
+cursor: pointer;
+}
+
+.cards-icon{
+fill: var(--logo-color);
+}
+
+.cards-img-icon:hover .cards-icon{
+fill:var(--second-text-color)
+}
+
+/* section client*/
+.header-client{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-top: 78px;
+    margin-bottom: 50px;
+}
+
+.clients-logoes{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+}
+.clients-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    background-color: var(--second-text-color);
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    margin-bottom: 101px;
+}
+.clients-img:hover{
+    border: 1px solid var(--accent-text-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+.clients-icon{
+    fill:var(--logo-color);
+    width: 170px;
+    height: 92px;
+}
+
+.clients-img:hover .clients-icon{
+    fill:var(--accent-text-color);
 }
 
 
@@ -580,6 +695,10 @@ li.card-border:nth-child(9) {
 }
 
 /*img porfolio*/
+.portfolio-link:hover, .portfolio-link:focus{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .decoration-images{
     margin-top: 0px;
     margin-bottom: 0px;
