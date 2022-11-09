@@ -173,13 +173,20 @@ header{
 }
 
 /*contacts */
-.contact {
+.contact-header{
+    display: flex;
     color: var(--primary-text-color);
+    align-items: center;
+}
+.contact-header:hover, .contact-header:focus{
+    color:var(--accent-text-color);
+}
+
+.contact {
     text-decoration: none;
 }
 
 .contact:hover, .contact:focus{
-    color:var(--accent-text-color);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -190,23 +197,11 @@ header{
     padding-bottom: 32px;
 }
 
-.nav-img{
+.nav-icon{
     display: flex;
-    align-items: center;
-    color: var(--primary-text-color);
-    
-}
-.nav-img :hover, .nav-img :focus{
-    color:var(--accent-text-color);
-}
-
-.nav-img{
-   color: currentColor;
-   margin-right: 10px; 
-}
-
-.contact:hover, .contact:focus > .nav-icon{
-    fill:var(--accent-text-color)
+    align-items: center; 
+    fill: currentColor;
+    margin-right: 10px; 
 }
 
 /*відступи між .list .contact*/
@@ -343,9 +338,13 @@ fill:var(--second-text-color);
 /* hero */
 .hero-background {
         background-color: var(--footer-background-color);
-        background-image: url("./background-hero-img.jpg");
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./background-hero-img.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        max-width: 1600px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 .section-hero{
@@ -634,6 +633,7 @@ fill:var(--second-text-color)
 .clients-img:hover .clients-icon{
     fill:var(--accent-text-color);
 }
+
 
 
 /*portfolio*/
