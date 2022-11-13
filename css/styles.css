@@ -590,6 +590,11 @@ border-radius: 50%;
 fill: var(--logo-color);
 }
 
+.cards-img-icon:hover .cards-icon,
+.cards-img-icon:focus .cards-icon{
+fill:var(--second-text-color);
+}
+
 /* section client*/
 .section-logo{
     padding-top: 94px;
