@@ -323,7 +323,7 @@ line-height: 16px;
 
 color: var(--second-text-color);
 }
-.cards-img .social{
+.social{
     background-color:var(--footer-background-icon);
 }
 .cards-img-icon .img-footer:hover, 
@@ -588,10 +588,6 @@ border-radius: 50%;
 
 .cards-icon{
 fill: var(--logo-color);
-}
-
-.cards-img-icon:hover .cards-icon{
-fill:var(--second-text-color)
 }
 
 /* section client*/
